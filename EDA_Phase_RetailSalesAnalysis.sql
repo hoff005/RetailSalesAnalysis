@@ -22,5 +22,3 @@
 
 */
 
-
-SELECT * FROM sales_analysis_db.new_retail_data;
