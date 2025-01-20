@@ -1,15 +1,15 @@
-### Data Cleaning
+### DATA CLEANING TASKS
 
 # Creates staging copy of the database
 CREATE TABLE new_retail_data_staging AS SELECT * FROM new_retail_data;
 
+### Name Column Formatting 
 
 # Splits out `Name` column into `first name` and `last name` columns 
 SELECT  
   SUBSTRING_INDEX(Name," ",1) AS first_name_,
   SUBSTRING_INDEX(SUBSTRING_INDEX(Name," ",2)," ",-1) AS last_name_
 FROM new_retail_data;
-
 
 
 # Adds new first_name and last_name columns to database 
@@ -36,6 +36,8 @@ DROP COLUMN Name;
 ALTER TABLE new_retail_data
 RENAME COLUMN `ï»¿Transaction_ID` TO `Transaction_ID`; 
 
+
+### Address field formatting
 
 # Splits Address column out into street_number and street_name
 SELECT
@@ -79,18 +81,10 @@ SET Suite =
 (SELECT REGEXP_SUBSTR(Address, 'Suite.+'));
 
 
-# Round Total_Amount to 2 decimal places 
-UPDATE new_retail_data
-SET Total_Amount = ROUND(Total_Amount,2); 
-
-
-# Round Amount to 2 decimal places 
-UPDATE new_retail_data
-SET Amount = ROUND(Amount,2); 
-
 # Trims the "Apt. and number" off the end of the street name field
 UPDATE new_retail_data 
 SET street_name = (SELECT REGEXP_REPLACE(street_name, 'Apt.+', ''));
+
 
 # Trims the "Suite and number" off the end of the street name field
 UPDATE new_retail_data 
@@ -106,14 +100,59 @@ RENAME COLUMN Address to Full_Address;
 Now have split out Address field as separate fields and have
 retained a column with full address - in case there is a need to filter
 by either of these:
-street_number
-street_name
-Apt_Number and
-Suite
+ - street_number
+ - street_name
+ - Apt_Number and
+ - Suite
 */
 
 
+### Rounding totals formatting  
 
+# Round Total_Amount to 2 decimal places 
+UPDATE new_retail_data
+SET Total_Amount = ROUND(Total_Amount,2); 
+
+
+# Round Amount to 2 decimal places 
+UPDATE new_retail_data
+SET Amount = ROUND(Amount,2); 
+
+
+### Phone number formatting  
+
+# Phone number reformating for readability
+SELECT Phone, CONCAT(SUBSTRING(Phone,1,3),"-", SUBSTRING(Phone,4,3),"-", SUBSTRING(Phone,7,4))
+FROM new_retail_data
+WHERE Phone <> '';
+
+ 
+# Update the reformatted Phone number for readability
+UPDATE new_retail_data
+SET `Phone` = CONCAT(SUBSTRING(Phone,1,3),"-", SUBSTRING(Phone,4,3),"-", SUBSTRING(Phone,7,4))
+WHERE `Phone` <> '';
+
+# Did not work so have to change the datatype of Phone field to accomodate
+ALTER TABLE new_retail_data
+MODIFY COLUMN Phone varchar(12);
+
+
+### Date reformating
+
+# Standardises Date Field to Australian date format DD-MM-YYYY 
+SELECT CONCAT(SUBSTRING(newDateFormat,9,2), "-", SUBSTRING(newDateFormat,6,2),"-", SUBSTRING(newDateFormat,1,4)) AS Transaction_Date
+FROM (
+		SELECT STR_TO_DATE(`Date`,"%m/%d/%Y") AS newDateFormat 
+		FROM new_retail_data) AS newDateFormat;
+
+        
+# Adds a new column Transaction_Date to replace Date field
+ALTER TABLE new_retail_data
+ADD Transaction_Date date;
+
+
+# Inserts the above date values into this new Transaction_Date column
+ 
 
 
 
