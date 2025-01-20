@@ -1,4 +1,4 @@
-# REMOVING DUPLICATE TRANSACTIONS 
+## REMOVING DUPLICATE TRANSACTIONS 
 
 # Searches for duplicated transactions (i.e. Transaction_ID) with either COUNT or window function
 SELECT Transaction_ID, COUNT(Transaction_ID)
@@ -46,3 +46,4 @@ FROM  (
 	OR Transaction_ID = 7176556;
 
 #no results found; meaning they are successfully deleted 
+         
