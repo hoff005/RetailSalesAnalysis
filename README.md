@@ -27,8 +27,9 @@ The project was planned in two (2) key phases:
   <b><li>Exploratory Data Analysis (EDA)</b>:
         This phase uses specific SQL Queries and Tableau visualisation techniques to take a deeper dive into what insights can be gleaned from the data in alignment with business metrics from a sales, customer and product 
         standpoint (more detail page 6) 
-        The intention is to provide sales professionals/managers and/or employees operating within a retail context, actionable recommendations that they can use to focus their efforts to be more profitable.
-        The analysis is intentionally focussed on these retail industry metrics/key areas of interest:</li>
+        The intention is to provide sales professionals/managers and/or employees operating within a retail context, actionable recommendations that they can use to focus their efforts to be more profitable.</li>
+
+The analysis is intentionally focused on these retail industry metrics/key areas of interest:
 
 <b>Sales Performance Insights</b>
 <ul>
