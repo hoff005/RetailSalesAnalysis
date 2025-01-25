@@ -1,4 +1,4 @@
-Data Cleaning and Exploratory Data Analysis (EDA)
+/* Data Cleaning and Exploratory Data Analysis (EDA)
 
 Project Background
 The following is an analysis project undertaken based on retail transactional data that encompasses: 
@@ -43,4 +43,5 @@ Customer Insights
 Product (Market) Trends
     -	Which products are underperforming? 
     -	Which product categories are performing? and which are not?
-    -	Are there particular brands performing better/worse than others?
+    -	Are there particular brands performing better/worse than others? 
+    */
