@@ -6,7 +6,9 @@ The following is an analysis project undertaken based on retail transactional da
     •	One (1) year worth of data
     •	159,334 customers (ranging from 18-70 years of age; 62% male, 38% female) and
     •	301,010 transactions 
-      This analysis was conducted by myself individually on the below dataset: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data
+
+This analysis was conducted by myself individually on the below dataset: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data
+
 This dataset contains numerous data points from: 
     •	customer demographic information (name, email address, country, phone number address, gender etc) to
     •	purchasing information (order quantity and dollar figure totals) through to
@@ -18,7 +20,7 @@ This large dataset is not without its errors; the pre-uploaded dataset to MySQL 
 The project was planned in two (2) key phases:
     1.	Data Cleaning: 
         -	Conducted various cleaning and standardisation tasks in Excel and SQL (more detail on page 4) to ensure the best possible accuracy, authenticity and reliability of the analysis, in order to best practically 
-          apply its insights.  
+            apply its insights.  
     
     2.	Exploratory Data Analysis (EDA):
         This phase uses specific SQL Queries and Tableau visualisation techniques to take a deeper dive into what insights can be gleaned from the data in alignment with business metrics from a sales, customer and product   
