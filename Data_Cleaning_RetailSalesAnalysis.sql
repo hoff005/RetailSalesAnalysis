@@ -3,8 +3,7 @@
 # Creates staging copy of the database
 CREATE TABLE new_retail_data_staging AS SELECT * FROM new_retail_data;
 
-### Name Column Formatting 
-
+### Example Splitting of Columns - Name field  
 # Splits out `Name` column into `first name` and `last name` columns 
 SELECT  
   SUBSTRING_INDEX(Name," ",1) AS first_name_,
@@ -149,10 +148,6 @@ FROM (
 # Adds a new column Transaction_Date to replace Date field
 ALTER TABLE new_retail_data
 ADD Transaction_Date date;
-
-
-# Inserts the above date values into this new Transaction_Date column
- 
 
 
 
