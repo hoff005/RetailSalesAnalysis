@@ -1,4 +1,4 @@
-<b><ins>Data Cleaning and Exploratory Data Analysis (EDA) </ins></b>
+<b><ins>Data Cleaning and Exploratory Data Analysis (EDA)</ins></b>
 
 Project Background
 The following is an analysis project undertaken based on retail transactional data that encompasses:
