@@ -6,7 +6,6 @@
 # Finding each column that has blank '' values and replacing with NULL values
 # Can find them by searching each individual column name in the formula below
 # replacing the colum name in the formula with whatever column name we are searching for blanks in
-*/
 
 SELECT COUNT(Address)
 FROM all_retail_sales
