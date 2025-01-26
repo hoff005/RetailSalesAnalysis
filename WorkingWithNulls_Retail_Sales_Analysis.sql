@@ -1,4 +1,7 @@
-/* ###  Working with NULL Values
+###  Working with NULL Values
+
+# Some example code that was written to perform the below tasks; some of these steps in particular were later abandoned in favour of completing these faster in excel
+# Leaving these just to show my work and evidence the ability to do this in SQL also
 
 # Finding each column that has blank '' values and replacing with NULL values
 # Can find them by searching each individual column name in the formula below
