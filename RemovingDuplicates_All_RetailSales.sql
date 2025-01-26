@@ -1,7 +1,7 @@
 # REMOVING DUPLICATE TRANSACTIONS 
 
 # Some example code that was written to perform the below tasks; some of these steps in particular were later abandoned in favour of completing these faster in excel
-# Leaving these just to show my work and evidence the ability to do this in SQL also*/  
+# Leaving these just to show my work and evidence the ability to do this in SQL also
 
 # Searches for duplicated transactions (i.e. Transaction_ID) with either COUNT or window function
 SELECT Transaction_ID, COUNT(Transaction_ID)
