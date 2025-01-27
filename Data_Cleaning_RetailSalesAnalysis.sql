@@ -152,7 +152,10 @@ FROM (
 ALTER TABLE all_retail_data
 ADD Transaction_Date date;
 
-
+# Fix spelling error 
+UPDATE all_retail_sales
+SET Product_Brand = REPLACE(Product_Brand, 'Whirepool', 'Whirlpool')
+WHERE Product_Brand = 'Whirepool';
 
 
 
