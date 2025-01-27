@@ -4,7 +4,7 @@ Project Background
 The following is an analysis project undertaken based on retail transactional data that encompasses:
 <ul><li>Five (5) countries (USA, Germany, Australia, UK and Canada)</li>
 <li>One (1) year worth of data    </li>
-<li>159,334 customers (ranging from 18-70 years of age; 62% male, 38% female) and</li>
+<li>159,335 customers (ranging from 18-70 years of age; 62% male, 38% female) and</li>
 <li>301,010 transactions</li></ul>
 
 This analysis was conducted by myself individually on the below dataset: https://www.kaggle.com/datasets/sahilprajapati143/retail-analysis-large-dataset/data
